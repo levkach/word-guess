@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <h1>{{ "Word Game" }}</h1>
     <h2>{{ "Classical word quiz game" }}</h2>
     <nav>
       <router-link to="/home">Home</router-link>

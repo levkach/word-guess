@@ -1,6 +1,5 @@
 <template>
   <div id="records">
-    <h1>Word Game</h1>
     <h2>Table of Records</h2>
 
     <router-link

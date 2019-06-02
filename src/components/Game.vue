@@ -1,6 +1,5 @@
 <template>
   <div class="game">
-    <h1>{{ "Word Game" }}</h1>
     <h2>{{ "Choose game settings" }}</h2>
     <diff-picker @changed="handleChangedDiffs" v-bind:randomize="shuffle"></diff-picker>
     <tag-picker @changed="handleChangedTags" v-bind:randomize="shuffle"></tag-picker>

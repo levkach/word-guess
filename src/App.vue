@@ -1,5 +1,11 @@
 <template>
   <div id="app">
+    <header>
+      <div v-bind:style="{transform:'rotateY(' + deg + 'deg)'}">
+        <img id="logo-svg" src="./assets/logo.svg">
+      </div>
+      <h1>Word Guess</h1>
+    </header>
     <transition name="page" mode="out-in">
       <router-view/>
     </transition>
@@ -12,11 +18,16 @@ import { db } from "./main.js";
 export default {
   name: "App",
   data() {
-    return {};
+    return {
+      deg: 0
+    };
   },
 
   created: function() {
     console.log(db);
+    setInterval(() => {
+      this.deg = this.deg + Object.randomInt(0,40);
+    }, 100);
     this.fetchWords();
   },
 
@@ -53,9 +64,27 @@ export default {
 </script>
 
 <style>
+/* Fancy background (Thanks to leaverou @github */
+body {
+  background-color: #fff;
+  background-image: linear-gradient(
+      90deg,
+      transparent 79px,
+      #abced4 79px,
+      #abced4 81px,
+      transparent 81px
+    ),
+    linear-gradient(#eee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
+}
+
 h1,
 h2 {
   font-weight: normal;
+}
+
+header {
+  margin-top: 20px;
 }
 
 #app {
@@ -88,35 +117,15 @@ a:hover {
   width: inherit;
 }
 
-/* .page-enter,
-.page-leave-to {
-  opacity: 0;
-  transform: translateX(-50px) ;
-}
-.page-enter-to,
-.page-leave {
-  opacity: 1;
-  transform: translateX(0px);
-} */
 .page-leave-active,
 .page-enter-active {
-  /* animation: coming 1s;
-  animation-delay: 0.5s; */
   transition: opacity 0.25s;
-  /* transition: opacity, transform 200ms ease-out; */
 }
 
 .page-enter,
 .page-leave-to {
-  /* animation: coming 1s;
-  animation-delay: 0.5s; */
   opacity: 0;
-  /* transition: opacity, transform 200ms ease-out; */
 }
-
-/* .page-leave-active {
-  animation: going 1s;
-} */
 
 @keyframes going {
   from {
@@ -138,7 +147,14 @@ a:hover {
   }
 }
 
-@media screen {
+@keyframes logo {
+  0%,
+  100% {
+    translate: ;
+  }
+}
+
+@media screen and (max-width: 450px) {
   #app {
     margin-top: 20px;
   }
