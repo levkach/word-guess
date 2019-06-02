@@ -11,7 +11,7 @@ export default {
   props: ["directive"],
   data() {
     return {
-      limit: 7000,
+      limit: 10000,
       interval: null,
       step: 50,
       progress: 0
