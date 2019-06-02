@@ -26,7 +26,7 @@ export default {
   created: function() {
     console.log(db);
     setInterval(() => {
-      this.deg = this.deg + Object.randomInt(0,40);
+      this.deg = this.deg + Object.randomInt(0, 40);
     }, 100);
     this.fetchWords();
   },
@@ -144,13 +144,6 @@ a:hover {
   to {
     transform: translateX(0);
     opacity: 1;
-  }
-}
-
-@keyframes logo {
-  0%,
-  100% {
-    translate: ;
   }
 }
 
