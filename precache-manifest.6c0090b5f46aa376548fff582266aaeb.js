@@ -24,11 +24,11 @@ self.__precacheManifest = [
     "url": "/word-guess/js/chunk-vendors.7cdb501d.js"
   },
   {
-    "revision": "2f8a0a7705d1c17adf71",
-    "url": "/word-guess/js/app.eff403b7.js"
+    "revision": "cd964b2d386ada40e8bb",
+    "url": "/word-guess/js/app.6e6f858b.js"
   },
   {
-    "revision": "a0691ee85a1d455f5760c11316cb1063",
+    "revision": "385eb66ee726d04a9e064bf71c4d9f4f",
     "url": "/word-guess/index.html"
   },
   {
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/word-guess/img/logo.df64f36c.svg"
   },
   {
-    "revision": "2f8a0a7705d1c17adf71",
-    "url": "/word-guess/css/app.08562ba2.css"
+    "revision": "cd964b2d386ada40e8bb",
+    "url": "/word-guess/css/app.65e050d6.css"
   }
 ];
