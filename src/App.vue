@@ -26,8 +26,8 @@ export default {
   created: function() {
     console.log(db);
     setInterval(() => {
-      this.deg = this.deg + 10;
-    }, 100);
+      this.deg = (this.deg + 10) % 370 ;
+    }, 50);
     this.fetchWords();
   },
 

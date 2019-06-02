@@ -17,7 +17,11 @@
       </thead>
 
       <tbody>
-        <tr v-for="r in records" :key="r.id">
+        <tr
+          v-for="r in records"
+          :key="r.id"
+          v-bind:class="{newInstance: r.username === newUsername && r.id === records.length }"
+        >
           <td>{{r.username}}</td>
           <td>{{r.score}}</td>
         </tr>
@@ -51,6 +55,7 @@ export default {
     addNewRecord: function() {
       // Save the record if it is valid
       if (this.newUsername && this.newRecord) {
+        // Compute weighted score (base on difficulty)
         const score = this.newRecord.reduce((acc, curr) => {
           return acc + curr.result * diffEnum[curr.word.level];
         }, 0);
@@ -59,7 +64,10 @@ export default {
     },
 
     loadRecords: async function() {
-      this.records = await db.records.orderBy('score').reverse().toArray();
+      this.records = await db.records
+        .orderBy("score")
+        .reverse()
+        .toArray();
     }
   }
 };
@@ -90,5 +98,9 @@ export default {
 
 #records a {
   margin-top: 15px;
+}
+
+#records tr.newInstance {
+  background: lightgreen;
 }
 </style>

@@ -11,8 +11,8 @@
       ></question>
 
       <div id="controls">
-        <router-link :to="{name: 'Result', params: {records:record, canEdit:true} }">End</router-link>
         <router-link id="back" to="/game">Back</router-link>
+        <router-link id="end" :to="{name: 'Result', params: {records:record, canEdit:true} }">End</router-link>
       </div>
     </div>
   </div>
@@ -122,20 +122,19 @@ export default {
   margin-top: 50px;
 }
 #controls {
-  margin-top: 2%;
+  margin-top: 10%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
 }
 
-#controls a {
-  margin-top: 8px;
+#controls #back {
+  margin-right: 3%;
 }
 
-#controls #back {
-  margin-top: 40px;
-  margin-right: 30%;
+#controls #end {
+  margin-left: 3%;
 }
 </style>
 

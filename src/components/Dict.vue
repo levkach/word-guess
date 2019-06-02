@@ -13,7 +13,7 @@ import DiffPicker from "./parts/DiffPicker";
 import TagPicker from "./parts/TagPicker";
 import WordList from "./parts/WordList";
 
-import {db} from "../main.js"
+import { db } from "../main.js";
 
 export default {
   components: { DiffPicker, WordList, TagPicker },
@@ -25,21 +25,29 @@ export default {
   data() {
     return {
       allWords: [],
-      words: []
+      words: [],
+      currentDiffs: [],
+      currentTags: []
     };
   },
   methods: {
     updateDiffs: function(chosenDiffs) {
-      console.log(chosenDiffs);
-      this.words = this.allWords.filter(w => {
-        return chosenDiffs.length === 0 || chosenDiffs.includes(w.level);
-      });
+      this.currentDiffs = chosenDiffs;
+      this.updateWords();
     },
 
     updateTags: function(chosenTags) {
-      console.log(chosenTags);
+      this.currentTags = chosenTags;
+      this.updateWords();
+    },
+
+    updateWords: function() {
       this.words = this.allWords.filter(w => {
-        return chosenTags.length === 0 || chosenTags.includes(w.tag);
+        return (
+          (this.currentDiffs.length === 0 ||
+            this.currentDiffs.includes(w.level)) &&
+          (this.currentTags.length === 0 || this.currentTags.includes(w.tag))
+        );
       });
     }
   }

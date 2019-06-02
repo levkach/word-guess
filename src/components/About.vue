@@ -7,7 +7,6 @@
     <p>
       Cilem projektu bylo vytvorit jednoduchou hru za ucelem naucit si zaklady jazyku Javascript,
       prozkoumat zajimave moznosti jazyku CSS3 a vyzkouset si framework Vue.js
-      <Vue class="js"></Vue>
     </p>
 
     <p>
@@ -15,7 +14,7 @@
       <i>"word quiz"</i>.
       Uzivatel zvoli libovolnou mnozinu urovne slozitosti (kterych je celkove tri), libovolnou mnozinu okruhu slov a zacne hrat.
       <b>Otazka</b>
-      je definice slova, moznosti odpovedi jsou ctyri, spravna moznost je vzdy jedna. Cas je ohranicen, celkem 7 sekund na otazku.
+      je definice slova, moznosti odpovedi jsou ctyri, spravna moznost je vzdy jedna. Cas je ohranicen, celkem 10 sekund na otazku.
       Po odpovedi ci uplynuti casu se zobrazi vysledek a zindikuje se spravna odpoved. Takle hra pokracuje az uzivatel ji ukonci, nebo se vyprazdni slovni zasoba anebo uzivatel pujde zpatky.
       Po skonceni hry si uzivatel bud ulozi vysledky do tabulky anebo necha a jde zpatky.
       Hra je doplnena setridenou tabulkou vysledku a slovnikem s moznosti filtrovani slov podle slozitosti a okruhu.
@@ -26,7 +25,7 @@
     <i>Vyuzity Stack:</i>
     <ul>
       <li>HTML 5, CSS 3, Javascript</li>
-      <li>Vue.js, Vue router, Vue CLI</li>
+      <li>Vue.js, Vue router, Vue CLI 3</li>
       <li>Dexie</li>
       <li>Webpack, Babel, NPM</li>
     </ul>
@@ -35,6 +34,11 @@
       Slova se cepraji z externiho serveru na Google Cloudu (psano v nodejs), ktery je ma ulozena v zadanem formatu.
       Nasledne se slova ukladaji i do interni IndexedDB databazi pro optimalizaci vyuziti site.
       Instance teto databazi je pak pouzita tam kde je treba (ve slovniku a u voleb parametru hry).
+      <br>Slova maji atributy
+      <i>"self"</i> (slovo samotne),
+      <i>definition</i>,
+      <i>tag</i> a
+      <i>difficulty</i>.
     </p>
 
     <p>
@@ -53,11 +57,23 @@
       Ty uz jsou pak nejjednodussi bloky. Jsou to v podstate
       <i>html</i> znacky
       <i>div</i>
-      , reagujici na stisknuti a predavajici tyto udalosti nahoru rodicum, kde jsou pak informace o techto udalostech vyuzita pro provedeni zmen.
+      , reagujici na stisknuti a predavajici tyto udalosti nahoru rodicum, kde jsou pak informace o techto udalostech vyuzita pro provedeni zmen. Tak,
+      <i>DiffPicker</i> a
+      <i>TagPicker</i> dostavaji udalosti od koresp. prvku a predavaji novou udalost o zmene komponente
+      <b>Dictionary</b>, ktera uz vybrana slova na zaklade techto filtru vykresli.
       Tyto casti a komponenty maji vlastni "scoped" stylovani. Nejcasteji bylo pouzito stylovani pomoci Flexboxu. Podobne to funguje v cele aplikaci.
       Jsou tedy vyuzite principy
       <i>Props down - events up</i>,
       <i>Separation of concerns</i> a reaktivita.
+    </p>
+
+    <p>
+      Aplikace nasledne byla nahrana na GitHub a do umistena na domene
+      <br>
+      <a
+        class="nostyle"
+        href="https://levkach.github.io/word-guess/#/"
+      >https://levkach.github.io/word-guess/#/</a>
     </p>
 
     <h4>Pozadavky na HTML</h4>
@@ -80,7 +96,7 @@
         <i>:hover</i>)
       </li>
       <li>Aplikace je vyuzitelna i na moblnich zarizenich (Media querries, vendor prefixy)</li>
-      <li>Jednoduche transitions a animations (prechod mezi stranky, animace buttonu)</li>
+      <li>Jednoduche transitions a animations (prechod mezi stranky, animace buttonum, animace loga, stylovani pozadi)</li>
     </ul>
 
     <h4>Pozadavky na Javascript</h4>
@@ -120,5 +136,11 @@ export default {
 
 #about a {
   margin-top: 10px;
+}
+
+a.nostyle {
+  all: unset;
+  cursor: pointer;
+  color: blueviolet;
 }
 </style>
