@@ -36,7 +36,11 @@ export default {
     fetchWords: function() {
       const urls = [
         "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/academic",
-        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/music"
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/music",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/science",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/food-beg",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/food-adv",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/animals"
       ];
       for (let url of urls)
         fetch(url)
@@ -148,6 +152,19 @@ a:hover {
 }
 
 @media screen and (max-width: 450px) {
+  body {
+    background-color: #fff;
+    background-image: linear-gradient(
+        0deg,
+        transparent 79px,
+        #abced4 79px,
+        #abced4 81px,
+        transparent 81px
+      ),
+      linear-gradient(#eee 0.1em, transparent 0.1em);
+    background-size: 100% 1.2em;
+  }
+
   #app {
     margin-top: 20px;
   }

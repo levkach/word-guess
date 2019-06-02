@@ -23,7 +23,7 @@ export default {
   },
   data() {
     return {
-      tags: ["Music", "Animals", "Food", "Academic"],
+      tags: ["Music", "Animals", "Food", "Academic", "Science"],
       selected: []
     };
   },

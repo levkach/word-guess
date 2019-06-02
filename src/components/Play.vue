@@ -122,7 +122,7 @@ export default {
   margin-top: 50px;
 }
 #controls {
-  margin-top: 40px;
+  margin-top: 2%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -133,8 +133,9 @@ export default {
   margin-top: 8px;
 }
 
-#controls a #back {
-  margin-top: 20px;
+#controls #back {
+  margin-top: 40px;
+  margin-right: 30%;
 }
 </style>
 
