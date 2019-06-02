@@ -26,7 +26,7 @@ export default {
   created: function() {
     console.log(db);
     setInterval(() => {
-      this.deg = this.deg + Object.randomInt(0, 40);
+      this.deg = this.deg + 10;
     }, 100);
     this.fetchWords();
   },
