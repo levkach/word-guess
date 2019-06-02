@@ -11,15 +11,16 @@ export default {
   props: ["directive"],
   data() {
     return {
-      limit: 10000,
+      limit: 15000,
       interval: null,
-      step: 50,
+      step: 200,
       progress: 0
     };
   },
   methods: {
     start: function() {
       this.reset();
+      this.step = this.limit / 100;
       this.interval = setInterval(this.count, this.step);
     },
 

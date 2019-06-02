@@ -44,7 +44,12 @@ export default {
           this.resetParams();
 
           this.watchedGuess = this.guess.definition;
-          this.watchedOpts = [...this.opts, this.guess];
+
+          // put guess in a random position
+          this.watchedOpts = [...this.opts];
+          this.watchedOpts.insert(Math.floor(Math.random() * 4), this.guess);
+
+          console.log(this.watchedOpts);
 
           break;
 
@@ -112,7 +117,7 @@ export default {
   width: auto;
 }
 
-#timer{
+#timer {
   margin-right: 20%;
   margin-left: 20%;
 }

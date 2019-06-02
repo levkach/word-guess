@@ -81,10 +81,10 @@
       <li>DOCTYPE je validni</li>
       <li>Testovano v Chrome, Firefox a Edge</li>
       <li>Byla pouzita SVG grafika pro tvorbu logo ikonky</li>
-      <li>audio prvky behem hry</li>
-      <li>semanticky znacky pro navigaci</li>
-      <li>osetreny formularovy prvek pro zadani vysledku</li>
-      <li>aplikace je funkcni i offline</li>
+      <li>Audio prvky behem hry</li>
+      <li>Semanticky znacky pro navigaci</li>
+      <li>Osetreny formularovy prvek pro zadani vysledku</li>
+      <li>Aplikace je funkcni i offline</li>
     </ul>
 
     <h4>Pozadavky na CSS3</h4>

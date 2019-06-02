@@ -61,3 +61,7 @@ Array.prototype.subArrayOfNExclusiveWith = function (n, exclude) {
       return elem
   })
 }
+
+Array.prototype.insert = function (index, item) {
+  this.splice(index, 0, item)
+}

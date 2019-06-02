@@ -20,7 +20,7 @@
         <tr
           v-for="r in records"
           :key="r.id"
-          v-bind:class="{newInstance: r.username === newUsername && r.id === records.length }"
+          v-bind:class="{newInstance: r.username === newUsername }"
         >
           <td>{{r.username}}</td>
           <td>{{r.score}}</td>
