@@ -1,4 +1,6 @@
-# Word guess
+# Word guess  
+
+Classical word quiz game written in Vue.js  
 
 ## Project setup
 ```
