@@ -40,7 +40,10 @@ export default {
         "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/academic-beg",
 
 
-        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/music",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/music-adv",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/music-inter",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/music-beg",
+
 
         "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/science-adv",
         "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/science-inter",
