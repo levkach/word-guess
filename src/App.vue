@@ -26,7 +26,7 @@ export default {
   created: function() {
     console.log(db);
     setInterval(() => {
-      this.deg = (this.deg + 10) % 370 ;
+      this.deg = (this.deg + 10) % 370;
     }, 50);
     this.fetchWords();
   },
@@ -35,12 +35,24 @@ export default {
     // fetch words from external API (CORS is solved via another API since idk how to allow it on gcloud)
     fetchWords: function() {
       const urls = [
-        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/academic",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/academic-adv",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/academic-inter",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/academic-beg",
+
+
         "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/music",
-        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/science",
-        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/food-beg",
+
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/science-adv",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/science-inter",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/science-beg",
+
         "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/food-adv",
-        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/animals"
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/food-inter",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/food-beg",
+
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/animals-adv",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/animals-inter",
+        "https://cors-anywhere.herokuapp.com/https://my-project-1493752659302.appspot.com/words/vocab/animals-beg"
       ];
       for (let url of urls)
         fetch(url)

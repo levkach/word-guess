@@ -14,7 +14,7 @@
       <i>"word quiz"</i>.
       Uzivatel zvoli libovolnou mnozinu urovne slozitosti (kterych je celkove tri), libovolnou mnozinu okruhu slov a zacne hrat.
       <b>Otazka</b>
-      je definice slova, moznosti odpovedi jsou ctyri, spravna moznost je vzdy jedna. Cas je ohranicen, celkem 10 sekund na otazku.
+      je definice slova, moznosti odpovedi jsou ctyri, spravna moznost je vzdy jedna. Cas je ohranicen, celkem 15 sekund na otazku.
       Po odpovedi ci uplynuti casu se zobrazi vysledek a zindikuje se spravna odpoved. Takle hra pokracuje az uzivatel ji ukonci, nebo se vyprazdni slovni zasoba anebo uzivatel pujde zpatky.
       Po skonceni hry si uzivatel bud ulozi vysledky do tabulky anebo necha a jde zpatky.
       Hra je doplnena setridenou tabulkou vysledku a slovnikem s moznosti filtrovani slov podle slozitosti a okruhu.
@@ -76,7 +76,9 @@
       >https://levkach.github.io/word-guess/#/</a>
     </p>
 
-    <h4>Pozadavky na HTML</h4>
+    <h4>HTML</h4>
+    <p>Aplikace je psana pomoci Vue, takze html je pouzito v prototypovani jednotlivych komponent / casti</p>
+
     <ul>
       <li>DOCTYPE je validni</li>
       <li>Testovano v Chrome, Firefox a Edge</li>
@@ -87,7 +89,12 @@
       <li>Aplikace je funkcni i offline</li>
     </ul>
 
-    <h4>Pozadavky na CSS3</h4>
+    <h4>CSS</h4>
+    <p>
+      Aplikace pouziva vnorene stylovani pro jednotlive komponenty a casti. Nejcasteji bylo pouzito Flexbox. Kompatibilita pro mobilni zarizeni byla zajistena pomoci
+      <i>mediaqueries</i> - kdyz je rozmer displeju mensi urcite hodnoty, layout komponent se meni, pozadi ztrati kolmou modrou caru a logo je posunuto nahoru.
+    </p>
+
     <ul>
       <li>
         V par mistech (
@@ -99,7 +106,16 @@
       <li>Jednoduche transitions a animations (prechod mezi stranky, animace buttonum, animace loga, stylovani pozadi)</li>
     </ul>
 
-    <h4>Pozadavky na Javascript</h4>
+    <h4>Javascript</h4>
+    <p>
+      Psano v Vue.js primarne, takze se vyuziva reaktivita. Casove limity v otazkach jsou reseny pomoci rekurzivni funkce
+      <i>run()</i> volane v
+      <i>
+        setTimeout(
+        <i>run()</i>, ...)
+      </i>
+    </p>
+
     <ul>
       <li>
         OOP - zcasti je. Komponenty jsou v podstate objekty, komunikujici pomoci zprav.

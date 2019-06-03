@@ -23,10 +23,15 @@ export default {
 </script>
 
 <style scoped>
-.word{
+.word {
   cursor: pointer;
   border: 1px solid gray;
   padding-bottom: 5px;
+  transition: background 0.15s linear;
+}
+
+.word:hover {
+  background: lightgray;
 }
 .self {
   font-size: 20px;
